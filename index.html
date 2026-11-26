@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đồng Quê - Quản lý nhà hàng</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="loginView" class="login-screen">
+    <form id="loginForm" class="login-card">
+      <div class="brand-mark">DQ</div>
+      <p class="eyebrow">HỆ THỐNG QUẢN LÝ NHÀ HÀNG</p>
+      <h1>Ẩm thực Đồng Quê</h1>
+      <p class="muted">Đăng nhập để tiếp tục</p>
+      <label>Tài khoản<input id="username" value="admin" autocomplete="username" required></label>
+      <label>Mật khẩu<input id="password" type="password" value="123456" autocomplete="current-password" required></label>
+      <button class="btn primary full" type="submit">Đăng nhập</button>
+      <small class="muted">Demo: admin / 123456</small>
+      <p id="loginError" class="error"></p>
+    </form>
+  </div>
+
+  <div id="appView" class="app hidden">
+    <aside class="sidebar">
+      <div class="brand"><span class="brand-mark small">DQ</span><div><b>ĐỒNG QUÊ</b><small>Restaurant manager</small></div></div>
+      <nav id="navigation">
+        <button class="nav-item active" data-page="dashboard">▦ <span>Tổng quan</span></button>
+        <button class="nav-item" data-page="tables">▤ <span>Quản lý bàn</span></button>
+        <button class="nav-item" data-page="menu">♨ <span>Thực đơn</span></button>
+        <button class="nav-item" data-page="orders">☷ <span>Gọi món</span></button>
+        <button class="nav-item" data-page="invoices">▧ <span>Hóa đơn</span></button>
+        <button class="nav-item" data-page="customers">♙ <span>Khách hàng</span></button>
+        <button class="nav-item" data-page="staff">♟ <span>Nhân viên</span></button>
+        <button class="nav-item" data-page="reports">▥ <span>Thống kê</span></button>
+      </nav>
+      <div class="sidebar-bottom"><span class="status-dot"></span> Dữ liệu lưu trên trình duyệt</div>
+    </aside>
+    <main class="main">
+      <header class="topbar"><div><p class="eyebrow" id="todayLabel"></p><h2 id="pageTitle">Tổng quan</h2></div><div class="user-box"><span class="avatar">A</span><div><b>Quản trị viên</b><small>admin</small></div><button id="logoutBtn" class="btn light">Thoát</button></div></header>
+      <section id="pageContent"></section>
+      <footer>© 2026 - Đề tài thực tập tốt nghiệp ngành Ứng dụng phần mềm</footer>
+    </main>
+  </div>
+  <div id="modalRoot"></div>
+  <div id="toast" class="toast"></div>
+  <script src="js/app.js"></script>
+</body>
+</html>
